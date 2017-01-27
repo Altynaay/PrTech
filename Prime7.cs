@@ -10,7 +10,7 @@ namespace Prime_number
     {
         static bool check(int n)
         {
-            for (int i = 2; i <= n; i++)
+            for (int i = 2; i <= n; i++)// check number on is it Prime 
             {
                 if (n % i == 0)
                 {
@@ -23,23 +23,36 @@ namespace Prime_number
         }
         static void Main(string[] args)
         {
-            int c = int.Parse(Console.ReadLine());
-            int  [] arr = new int [c];
-            for (int i = 0; i < c; i++)
+            string[] s = Console.ReadLine().Split(); // cin numbers
+            int[] arr = new int[s.Length];
+            for (int i = 0; i < s.Length; i++) // take numbers to array "1" "2" "3"
             {
-                arr[i] = int.Parse(Console.ReadLine());
-              //  Console.WriteLine(b);
-              
+                try { 
+                    arr[i] = int.Parse(s[i]);
+                }
+                catch (Exception e)
+                {
+                    arr[i] = 0;
+                }
+
             }
 
-            for (int i = 0; i < c; i++)
+            for (int i = 0; i < s.Length; i++)
             {
-                if (check(arr[i]))
-                {
-                   Console.WriteLine(arr[i]);
+                if (arr[i] == 1){
+                    Console.WriteLine(1);
                 }
-                
-              
+                if (arr[i] == 2) 
+                {
+                    Console.WriteLine(2);
+                }
+
+                if (check(arr[i])) //check array numbers
+                {
+                    Console.WriteLine(arr[i]);
+                }
+
+
             }
             Console.ReadKey();
         }
