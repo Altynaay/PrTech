@@ -9,64 +9,21 @@ namespace Example2
 {
     class Program
     {
-        static void ex1()
-        {
-            DirectoryInfo directory = new DirectoryInfo(@"G:");
-            //gettin files
-            FileInfo[] files = directory.GetFiles();
-            //getting directories
-            DirectoryInfo[] directories = directory.GetDirectories();
-
-            Console.WriteLine();
-            Console.WriteLine("Files:");
-            foreach (FileInfo file in files)
-            {
-                Console.WriteLine(file.Name);
-            }
-            Console.WriteLine();
-            Console.WriteLine("Directories:");
-            foreach (DirectoryInfo directoryInfo in directories)
-            {
-                Console.WriteLine(directoryInfo.Name);
-            }
-
-            Console.ReadKey();
-        }
-        static void ex23()
-        {
-            DirectoryInfo directory = new DirectoryInfo(@"G:");
-            //getting files
-            FileInfo[] files = directory.GetFiles();
-            //getting directories
-            DirectoryInfo[] directories = directory.GetDirectories();
-            Console.WriteLine("Files:");
-            foreach (FileInfo file in files)
-            {
-                Console.WriteLine(file.Name);
-            }
-            Console.WriteLine();
-            Console.WriteLine("Directories:");
-            foreach (DirectoryInfo dInfo in directories)
-            {
-                Console.WriteLine(dInfo.Name);
-            }
-            Console.ReadKey();
-
-        }
+        
         static void Fil()
         {
-            DirectoryInfo directory = new DirectoryInfo(@"G:");
+            DirectoryInfo directory = new DirectoryInfo(@"G:");// get information from G: disk
             FileInfo[] files = directory.GetFiles();
             DirectoryInfo[] directories = directory.GetDirectories();
 
             Console.WriteLine("Files:");
-            foreach (FileInfo file in files)
+            foreach (FileInfo file in files)//cycle which write files names
             {
                 Console.WriteLine(file.Name);
             }
             Console.WriteLine();
             Console.WriteLine("Directories:");
-            foreach (DirectoryInfo dInfo in directories)
+            foreach (DirectoryInfo dInfo in directories)//cycle which write directories names
             {
                 Console.WriteLine(dInfo.Name);
             }

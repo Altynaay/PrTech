@@ -1,1 +1,6 @@
 c:\users\nurzhigit\documents\visual studio 2013\Projects\Week2_1_1\Week2_1_1\bin\Debug\Week2_1_1.exe.config
+C:\Users\Nurzhigit\documents\visual studio 2013\Projects\Week2_1_1\Week2_1_1\bin\Debug\Week2_1_1.exe
+C:\Users\Nurzhigit\documents\visual studio 2013\Projects\Week2_1_1\Week2_1_1\bin\Debug\Week2_1_1.pdb
+C:\Users\Nurzhigit\documents\visual studio 2013\Projects\Week2_1_1\Week2_1_1\obj\Debug\Week2_1_1.csprojResolveAssemblyReference.cache
+C:\Users\Nurzhigit\documents\visual studio 2013\Projects\Week2_1_1\Week2_1_1\obj\Debug\Week2_1_1.exe
+C:\Users\Nurzhigit\documents\visual studio 2013\Projects\Week2_1_1\Week2_1_1\obj\Debug\Week2_1_1.pdb
