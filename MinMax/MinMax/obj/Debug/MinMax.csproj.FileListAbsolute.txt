@@ -1,0 +1,6 @@
+c:\users\nurzhigit\documents\visual studio 2013\Projects\MinMax\MinMax\bin\Debug\MinMax.exe.config
+c:\users\nurzhigit\documents\visual studio 2013\Projects\MinMax\MinMax\bin\Debug\MinMax.exe
+c:\users\nurzhigit\documents\visual studio 2013\Projects\MinMax\MinMax\bin\Debug\MinMax.pdb
+c:\users\nurzhigit\documents\visual studio 2013\Projects\MinMax\MinMax\obj\Debug\MinMax.csprojResolveAssemblyReference.cache
+c:\users\nurzhigit\documents\visual studio 2013\Projects\MinMax\MinMax\obj\Debug\MinMax.exe
+c:\users\nurzhigit\documents\visual studio 2013\Projects\MinMax\MinMax\obj\Debug\MinMax.pdb
