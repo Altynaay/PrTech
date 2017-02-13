@@ -43,8 +43,6 @@ namespace Prime_number
                 {
                     Console.WriteLine(arr[i]);
                 }
-
-
             }
             Console.ReadKey();
         }
