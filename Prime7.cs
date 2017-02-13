@@ -39,14 +39,6 @@ namespace Prime_number
 
             for (int i = 0; i < s.Length; i++)
             {
-                if (arr[i] == 1){
-                    Console.WriteLine(1);
-                }
-                if (arr[i] == 2) 
-                {
-                    Console.WriteLine(2);
-                }
-
                 if (check(arr[i])) //check array numbers
                 {
                     Console.WriteLine(arr[i]);
