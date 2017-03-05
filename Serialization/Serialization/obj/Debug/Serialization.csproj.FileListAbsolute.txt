@@ -1,6 +1,0 @@
-c:\users\nurzhigit\documents\visual studio 2013\Projects\Serialization\Serialization\bin\Debug\Serialization.exe.config
-c:\users\nurzhigit\documents\visual studio 2013\Projects\Serialization\Serialization\bin\Debug\Serialization.exe
-c:\users\nurzhigit\documents\visual studio 2013\Projects\Serialization\Serialization\bin\Debug\Serialization.pdb
-c:\users\nurzhigit\documents\visual studio 2013\Projects\Serialization\Serialization\obj\Debug\Serialization.csprojResolveAssemblyReference.cache
-c:\users\nurzhigit\documents\visual studio 2013\Projects\Serialization\Serialization\obj\Debug\Serialization.exe
-c:\users\nurzhigit\documents\visual studio 2013\Projects\Serialization\Serialization\obj\Debug\Serialization.pdb
