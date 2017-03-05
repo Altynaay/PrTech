@@ -1,1 +1,1 @@
-# PrTech_2017_1
+# Smailov Nurzhigit
