@@ -18,6 +18,7 @@ namespace W5Snake
             body = new List<Point>();
             body.Add(new Point(10, 10));
             color = ConsoleColor.Yellow;
+           
         }
 
         public void Move(int dx, int dy)
@@ -41,6 +42,14 @@ namespace W5Snake
 
             Eat();
             CollisionWithWallAndSnake();
+            if (body.Count == 3)
+            {
+                Game.wall.Wall2();
+            }
+            if (body.Count == 5)
+            {
+                Game.wall.Wall3();
+            }
             //Eat();
         }
 

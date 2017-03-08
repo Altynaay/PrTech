@@ -32,6 +32,42 @@ namespace W5Snake
             }
             sr.Close();
         }
+        public void Wall2(){
+            body = new List<Point>();
+            color = ConsoleColor.Red;
+
+            StreamReader sr = new StreamReader("wall2.txt");
+            int n = int.Parse(sr.ReadLine());
+            for (int i = 0; i < n; i++)
+            {
+                String s = sr.ReadLine();
+                for (int j = 0; j < s.Length; j++)
+                {
+                    if (s[j] == '*')
+                        body.Add(new Point(j, i));
+                }
+            }
+            sr.Close();
+        }
+        public void Wall3()
+        {
+            body = new List<Point>();
+            color = ConsoleColor.Red;
+
+            StreamReader sr = new StreamReader("wall3.txt");
+            int n = int.Parse(sr.ReadLine());
+            for (int i = 0; i < n; i++)
+            {
+                String s = sr.ReadLine();
+                for (int j = 0; j < s.Length; j++)
+                {
+                    if (s[j] == '*')
+                        body.Add(new Point(j, i));
+                }
+            }
+            sr.Close();
+        }
+
         public void Draw()
         {
             Console.ForegroundColor = color;

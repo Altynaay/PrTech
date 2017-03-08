@@ -91,7 +91,7 @@ namespace W5Snake
             while (!Game.GameOver)
             {
                 Game.Draw();
-                Thread.Sleep(200);
+                Thread.Sleep(100);
                 int b = 500;
                 if (snake.body.Count % 10 == 0)
                 {
