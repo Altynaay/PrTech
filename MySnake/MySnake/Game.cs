@@ -3,82 +3,117 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
 
 namespace W5Snake
 {
-    [Serializable]
     class Game
     {
         public static bool GameOver = false;
         public static Snake snake = new Snake();
         public static Wall wall = new Wall();
         public static Food food = new Food();
-        //public static int d = 4;
+        public static int d = 2;
+
         public static void Init()
         {
-            Console.BackgroundColor = ConsoleColor.Black;
+            Console.CursorVisible = false;
+            Console.SetCursorPosition(20, 10);
+            Console.WriteLine("Press any key to start");
+            Console.SetCursorPosition(23, 11);
+            Console.WriteLine("...............");
+            Console.SetCursorPosition(25, 12);
+            Console.WriteLine("GOOD LUCK");
+            Console.ReadKey();
             Console.CursorVisible = false;
             Console.SetWindowSize(80, 40);
         }
-        /*public void ThreadSnake()
+        public static void Server()
         {
-            while (!GameOver)
-            {
-                Draw();
-                //Cnt();
-                Thread.Sleep(300);
-                switch(d){
-                    case 1:
-                        snake.Move(0,-1);
-                        break;
-                    case 2:
-                        snake.Move(0,1);
-                        break;
-                    case 3:
-                        snake.Move(-1,0);
-                        break;
-                    case 4:
-                        snake.Move(1,0);
-                        break;
-                }
+            Thread t = new Thread(ThreadSnake);
+            t.Start();
 
+            while (!Game.GameOver)
+            {
+                //Game.Draw();
+                ConsoleKeyInfo pressed = Console.ReadKey();
+                
+                if (pressed.Key == ConsoleKey.UpArrow)
+                    d = 1;
+                    //Game.snake.Move(0, -1);
+                if (pressed.Key == ConsoleKey.DownArrow)
+                    d = 2;
+                    //Game.snake.Move(0, 1);
+                if (pressed.Key == ConsoleKey.LeftArrow)
+                    d = 3;
+                    //Game.snake.Move(-1, 0);
+                if (pressed.Key == ConsoleKey.RightArrow)
+                    d = 4;
+                    //Game.snake.Move(1, 0);
+
+                if (pressed.Key == ConsoleKey.F2)
+                    Game.Save();
+                if (pressed.Key == ConsoleKey.F3)
+                    Game.Resume();
+                if (pressed.Key == ConsoleKey.Escape)
+                    Game.GameOver = true;
             }
-        }*/
+        }
 
         public static void Draw()
         {
-            
+            Console.Clear();
             snake.Draw();
             wall.Draw();
             food.Draw();
         }
 
-        public void Save()
+        public static void Save()
         {
-            Type t = this.GetType();
-            FileStream fs = new FileStream(String.Format("{0}.dat", t.Name), FileMode.OpenOrCreate, FileAccess.ReadWrite);
-            BinaryFormatter bf = new BinaryFormatter();
-            bf.Serialize(fs, this);
-            fs.Close();
             // serialize all objects
         }
 
-        public void Resume()
+        public static void Resume()
+        {
+            // deserialize all objects
+        }
+        public static void GameO()
         {
             Console.Clear();
-            Type t = this.GetType();
-            FileStream fs = new FileStream(String.Format("{0}.dat", t.Name), FileMode.OpenOrCreate, FileAccess.ReadWrite);
-            BinaryFormatter bf = new BinaryFormatter();
-            if (t == typeof(Wall))
-                Game.wall = bf.Deserialize(fs) as Wall;
-            if (t == typeof(Snake))
-                Game.snake = bf.Deserialize(fs) as Snake;
-            if (t == typeof(Food))
-                Game.food = bf.Deserialize(fs) as Food;
-            // deserialize all objects
+            Console.SetCursorPosition(30, 15);
+            Console.WriteLine("GAME OVER!");
+            Console.SetCursorPosition(28, 16);
+            Console.WriteLine("NEVER GIVE UP!");
+            Console.ReadKey();
+        }
+        public static void ThreadSnake()
+        {
+            while (!Game.GameOver)
+            {
+                Game.Draw();
+                Thread.Sleep(200);
+                int b = 500;
+                if (snake.body.Count % 10 == 0)
+                {
+                    Thread.Sleep(b);
+                    b -= 100;
+                }
+                switch (d)
+                {
+                    case 1:
+                        Game.snake.Move(0, -1);
+                        break;
+                    case 2:
+                        Game.snake.Move(0, 1);
+                        break;
+                    case 3:
+                        Game.snake.Move(-1, 0);
+                        break;
+                    case 4:
+                        Game.snake.Move(1, -0);
+                        break;
+                }
+            }
         }
     }
 }

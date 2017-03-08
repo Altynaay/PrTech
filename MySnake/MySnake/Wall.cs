@@ -11,7 +11,7 @@ namespace W5Snake
     class Wall
     {
         public List<Point> body;
-        public char sign = '#';
+        public char sign = 'o';
         public ConsoleColor color;
 
         public Wall()
@@ -20,9 +20,7 @@ namespace W5Snake
             color = ConsoleColor.Red;
 
             StreamReader sr = new StreamReader("wall.txt");
-
             int n = int.Parse(sr.ReadLine());
-            
             for (int i = 0; i < n; i++)
             {
                 String s = sr.ReadLine();

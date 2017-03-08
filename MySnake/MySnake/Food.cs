@@ -15,16 +15,28 @@ namespace W5Snake
         public Food()
         {
             color = ConsoleColor.Green;
-            sign = '*';
+            sign = '$';
             SetRandomPosition();
         }
-
+        public void Wallfood()
+        {
+            for (int i = 0; i < Game.wall.body.Count; i++)
+            {
+                if (location.x == Game.wall.body[i].x && location.y == Game.wall.body[i].y)
+                {
+                    SetRandomPosition();
+                }
+            }
+        }
         public void SetRandomPosition()
         {
+            
             int x = new Random().Next(0, 80);
             int y = new Random().Next(0, 40);
             // Is "x" and "y" on the wall or on the snake? If so, regenerate new position.
+
             location = new Point(x, y);
+            Wallfood();
         }
 
         public void Draw()
