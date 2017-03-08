@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
+using System.Runtime.Serialization.Formatters.Binary;
 
-namespace W5Snake
+namespace MySnake
 {
+    [Serializable]
     class Game
     {
         public static bool GameOver = false;
@@ -70,11 +72,18 @@ namespace W5Snake
 
         public static void Save()
         {
+            Game.snake.save();
+            Game.wall.save();
+            Game.food.save();
             // serialize all objects
         }
 
         public static void Resume()
         {
+            Console.Clear();
+            Game.snake.deser();
+            Game.wall.deser();
+            Game.food.deser();
             // deserialize all objects
         }
         public static void GameO()

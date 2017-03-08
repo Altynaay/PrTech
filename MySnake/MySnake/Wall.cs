@@ -5,9 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
 using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
-namespace W5Snake
+
+namespace MySnake
 {
+    [Serializable]
     class Wall
     {
         public List<Point> body;
@@ -76,6 +79,24 @@ namespace W5Snake
                 Console.SetCursorPosition(p.x, p.y);
                 Console.Write(sign);
             }
+        }
+        public void save()
+        {
+            FileStream fs = new FileStream("wall.dat", FileMode.OpenOrCreate, FileAccess.ReadWrite);
+            BinaryFormatter bf = new BinaryFormatter();
+            bf.Serialize(fs, this);
+            fs.Close();
+        }
+
+        public void deser()
+        {
+            FileStream fs = new FileStream("wall.dat", FileMode.OpenOrCreate, FileAccess.ReadWrite);
+            BinaryFormatter bf = new BinaryFormatter();
+            Wall wall = bf.Deserialize(fs) as Wall;
+            this.body = wall.body;
+            this.color = wall.color;
+            this.sign = wall.sign;
+            fs.Close();
         }
     }
 }

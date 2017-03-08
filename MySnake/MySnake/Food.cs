@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
-namespace W5Snake
+namespace MySnake
 {
+    [Serializable]
     class Food
     {
         public Point location;
@@ -44,6 +47,26 @@ namespace W5Snake
             Console.ForegroundColor = color;
             Console.SetCursorPosition(location.x, location.y);
             Console.Write(sign);
+        }
+        public void save()
+        {
+            FileStream fs = new FileStream("food.dat", FileMode.OpenOrCreate, FileAccess.ReadWrite);
+            BinaryFormatter bf = new BinaryFormatter();
+            bf.Serialize(fs, this);
+            fs.Close();
+        }
+
+        public void deser()
+        {
+            FileStream fs = new FileStream("food.dat", FileMode.OpenOrCreate, FileAccess.ReadWrite);
+            BinaryFormatter bf = new BinaryFormatter();
+            Food food = bf.Deserialize(fs) as Food;
+            this.location = food.location;
+            this.color = food.color;
+            this.sign = food.sign;
+
+
+            fs.Close();
         }
     }
 }

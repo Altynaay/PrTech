@@ -4,15 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
-namespace W5Snake
+namespace MySnake
 {
+    [Serializable]
     class Snake
     {
         public List<Point> body;
         public char sign = '0';
         public ConsoleColor color;
-
         public Snake()
         {
             body = new List<Point>();
@@ -93,6 +95,26 @@ namespace W5Snake
                 Console.SetCursorPosition(p.x, p.y);
                 Console.Write(sign);
             }
+        }
+        public void save()
+        {
+            FileStream fs = new FileStream("snake.dat", FileMode.OpenOrCreate, FileAccess.ReadWrite);
+            BinaryFormatter bf = new BinaryFormatter();
+            bf.Serialize(fs, this);
+            fs.Close();
+        }
+
+        public void deser()
+        {
+            FileStream fs = new FileStream("snake.dat", FileMode.OpenOrCreate, FileAccess.ReadWrite);
+            BinaryFormatter bf = new BinaryFormatter();
+            Snake snake = bf.Deserialize(fs) as Snake;
+            this.body = snake.body;
+            this.color = snake.color;
+            this.sign = snake.sign;
+
+
+            fs.Close();
         }
     }
 }
