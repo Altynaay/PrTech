@@ -1,0 +1,6 @@
+c:\users\nurzhigit\documents\visual studio 2013\Projects\Midka revision\Midka revision\bin\Debug\Midka revision.exe.config
+c:\users\nurzhigit\documents\visual studio 2013\Projects\Midka revision\Midka revision\bin\Debug\Midka revision.exe
+c:\users\nurzhigit\documents\visual studio 2013\Projects\Midka revision\Midka revision\bin\Debug\Midka revision.pdb
+c:\users\nurzhigit\documents\visual studio 2013\Projects\Midka revision\Midka revision\obj\Debug\Midka revision.exe
+c:\users\nurzhigit\documents\visual studio 2013\Projects\Midka revision\Midka revision\obj\Debug\Midka revision.pdb
+c:\users\nurzhigit\documents\visual studio 2013\Projects\Midka revision\Midka revision\obj\Debug\Midka revision.csprojResolveAssemblyReference.cache
