@@ -12,6 +12,42 @@ namespace Operators
 {
     class Program
     {
+        static void time()
+        {
+            int x = 35, y = 10;
+            Console.SetCursorPosition(x, y);
+            while (true)
+            {
+                Console.Clear();
+                for (int i = 1; i <= 12; i++)
+                {
+                    if (i <= 3)
+                    {
+                        x++;
+                        y++;
+                    }
+                    if (i > 3 && i <= 6)
+                    {
+                        x--;
+                        y++;
+                    }
+                    if (i > 6 && i <= 9)
+                    {
+                        x--;
+                        y--;
+                    }
+                    if (i > 9 && i <= 12)
+                    {
+                        x++;
+                        y--;
+                    }
+                    Console.SetCursorPosition(x, y);
+                    Console.Write(" "+i);
+                    Thread.Sleep(1000);
+
+                }
+            }
+        }
         static void TT()
         {
             int j = 0, k = 1,h = 1;
@@ -52,7 +88,7 @@ namespace Operators
         static void Main(string[] args)
         {
             Console.CursorVisible = false;
-            Thread t = new Thread(TT);
+            Thread t = new Thread(time);
             t.Start();
         }
     }
