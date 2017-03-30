@@ -1,0 +1,9 @@
+c:\users\nurzhigit\documents\visual studio 2013\Projects\calcluator_app2\calcluator_app2\bin\Debug\calcluator_app2.exe.config
+c:\users\nurzhigit\documents\visual studio 2013\Projects\calcluator_app2\calcluator_app2\bin\Debug\calcluator_app2.exe
+c:\users\nurzhigit\documents\visual studio 2013\Projects\calcluator_app2\calcluator_app2\bin\Debug\calcluator_app2.pdb
+c:\users\nurzhigit\documents\visual studio 2013\Projects\calcluator_app2\calcluator_app2\obj\Debug\calcluator_app2.csprojResolveAssemblyReference.cache
+c:\users\nurzhigit\documents\visual studio 2013\Projects\calcluator_app2\calcluator_app2\obj\Debug\calcluator_app2.Properties.Resources.resources
+c:\users\nurzhigit\documents\visual studio 2013\Projects\calcluator_app2\calcluator_app2\obj\Debug\calcluator_app2.csproj.GenerateResource.Cache
+c:\users\nurzhigit\documents\visual studio 2013\Projects\calcluator_app2\calcluator_app2\obj\Debug\calcluator_app2.exe
+c:\users\nurzhigit\documents\visual studio 2013\Projects\calcluator_app2\calcluator_app2\obj\Debug\calcluator_app2.pdb
+C:\Users\Nurzhigit\documents\visual studio 2013\Projects\calcluator_app2\calcluator_app2\obj\Debug\calcluator_app2.Form1.resources
