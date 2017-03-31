@@ -105,7 +105,9 @@ namespace calcluator_app2
         }
         private void button24_Click(object sender, EventArgs e)
         {
-            calculator.operation = Calculator.Operation.PROCENT;
+            calculator.saveSecondNumber(display.Text);
+            display.Text = calculator.getResultProcent().ToString();
+            //calculator.operation = Calculator.Operation.PROCENT;
         }
         private void button22_Click(object sender, EventArgs e)
         {
@@ -131,11 +133,6 @@ namespace calcluator_app2
             {
                 display.Text = calculator.getResultDivide().ToString();
             }
-            if (cnt == 5)
-            {
-                display.Text = calculator.getResultProcent().ToString();
-            }
-
         }
 
         
@@ -181,7 +178,11 @@ namespace calcluator_app2
 
         private void button18_Click(object sender, EventArgs e)
         {
-
+            // CE CE CE
+            //Button btn = sender as Button;
+            /*calculator.saveSecondNumber("0");
+            display.Text = "0";
+            calculator.saveSecondNumber(display.Text);*/
         }
 
         private void button27_Click(object sender, EventArgs e)
@@ -191,11 +192,14 @@ namespace calcluator_app2
         public double M;
         private void button25_Click(object sender, EventArgs e)
         {
-            M = double.Parse(display.Text); 
+            //MS
+            M = double.Parse(display.Text);
+            display.Text = "0";
         }
 
         private void button28_Click(object sender, EventArgs e)
         {
+            // M-
             M = double.Parse(display.Text) - M;  
         }
 
@@ -207,10 +211,12 @@ namespace calcluator_app2
         private void button26_Click(object sender, EventArgs e)
         {
             display.Text = M.ToString();
+            calculator.saveSecondNumber(M.ToString());
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
+            // M+
             M = double.Parse(display.Text) + M;   
         }
     }

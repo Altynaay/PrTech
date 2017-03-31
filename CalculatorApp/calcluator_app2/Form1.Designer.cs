@@ -342,6 +342,7 @@
             // 
             // button26
             // 
+            this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button26.Location = new System.Drawing.Point(43, 49);
             this.button26.Name = "button26";
             this.button26.Size = new System.Drawing.Size(35, 35);
@@ -352,6 +353,7 @@
             // 
             // button27
             // 
+            this.button27.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button27.Location = new System.Drawing.Point(5, 49);
             this.button27.Name = "button27";
             this.button27.Size = new System.Drawing.Size(35, 35);
@@ -362,6 +364,7 @@
             // 
             // button11
             // 
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button11.Location = new System.Drawing.Point(84, 49);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(35, 35);
@@ -372,6 +375,7 @@
             // 
             // button25
             // 
+            this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button25.Location = new System.Drawing.Point(166, 49);
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(35, 35);
@@ -382,6 +386,7 @@
             // 
             // button28
             // 
+            this.button28.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button28.Location = new System.Drawing.Point(125, 49);
             this.button28.Name = "button28";
             this.button28.Size = new System.Drawing.Size(35, 35);
