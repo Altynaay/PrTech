@@ -1,0 +1,9 @@
+c:\users\nurzhigit\documents\visual studio 2013\Projects\Asteroid\Asteroid\bin\Debug\Asteroid.exe.config
+c:\users\nurzhigit\documents\visual studio 2013\Projects\Asteroid\Asteroid\bin\Debug\Asteroid.exe
+c:\users\nurzhigit\documents\visual studio 2013\Projects\Asteroid\Asteroid\bin\Debug\Asteroid.pdb
+c:\users\nurzhigit\documents\visual studio 2013\Projects\Asteroid\Asteroid\obj\Debug\Asteroid.csprojResolveAssemblyReference.cache
+c:\users\nurzhigit\documents\visual studio 2013\Projects\Asteroid\Asteroid\obj\Debug\Asteroid.Form1.resources
+c:\users\nurzhigit\documents\visual studio 2013\Projects\Asteroid\Asteroid\obj\Debug\Asteroid.Properties.Resources.resources
+c:\users\nurzhigit\documents\visual studio 2013\Projects\Asteroid\Asteroid\obj\Debug\Asteroid.csproj.GenerateResource.Cache
+c:\users\nurzhigit\documents\visual studio 2013\Projects\Asteroid\Asteroid\obj\Debug\Asteroid.exe
+c:\users\nurzhigit\documents\visual studio 2013\Projects\Asteroid\Asteroid\obj\Debug\Asteroid.pdb
