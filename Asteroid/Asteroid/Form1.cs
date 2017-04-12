@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
-using System.Drawing;
 
 namespace Asteroid
 {
@@ -32,9 +31,27 @@ namespace Asteroid
         {
             asteroids.Ellipse(e.Graphics);
             asteroids.Polygon(e.Graphics);
-            asteroids.Bullet(e.Graphics);
             asteroids.strelka(e.Graphics);
             asteroids.Asters(e.Graphics);
+            asteroids.Bullet(e.Graphics);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            /*asteroids.Ellipse(g.Graphics);
+            asteroids.Polygon(g.Graphics);
+            asteroids.strelka(g.Graphics);
+            asteroids.Asters(g.Graphics);
+            asteroids.Bullet(g.Graphics);
+            Refresh();*/
+        }
+
+        private void DownKey(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+
+            }
         }
 
     }
