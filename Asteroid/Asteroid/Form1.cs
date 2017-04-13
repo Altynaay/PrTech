@@ -13,8 +13,8 @@ namespace Asteroid
 {
     public partial class Form1 : Form
     {
-        asteroidgame asteroids = new asteroidgame();
         Bullet bullet;
+        asteroidgame asteroids = new asteroidgame();
         SolidBrush brushgreen  = new SolidBrush(Color.Green);
 
         public Form1()
@@ -38,19 +38,34 @@ namespace Asteroid
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            /*asteroids.Ellipse(g.Graphics);
-            asteroids.Polygon(g.Graphics);
-            asteroids.strelka(g.Graphics);
-            asteroids.Asters(g.Graphics);
-            asteroids.Bullet(g.Graphics);
-            Refresh();*/
+            asteroids.ellip.X++;   asteroids.ellip.Y++;
+
+            asteroids.ellip2.X++;  asteroids.ellip2.Y--;
+
+            asteroids.ellip3.X--;  asteroids.ellip3.Y++;
+
+            asteroids.ellip4.X--;  asteroids.ellip4.Y--;
+
+            asteroids.star.X++;    asteroids.star.Y++;
+
+            asteroids.star2.X++;   asteroids.star2.Y--;
+
+            asteroids.star3.X--;   asteroids.star3.Y--;
+
+            asteroids.star4.X--;   asteroids.star4.Y++;
+
+            asteroids.raketa.X++;
+            asteroids.raketa.Y++;
+
+            Refresh();
         }
+        
 
         private void DownKey(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up)
             {
-
+                
             }
         }
 
