@@ -91,10 +91,10 @@ namespace Asteroid
         }
         public void Bullet(Graphics g)
         {
-            locationbul.X = 430;
-            locationbul.Y = 100;
-            g.FillEllipse(brushgreen, locationbul.X, locationbul.Y, 10, 30);// x = 430  y = 100
-            g.FillEllipse(brushgreen, locationbul.X - 10, locationbul.Y + 10, 30, 10);// x = 420  y = 110
+            //locationbul.X = 430;
+            //locationbul.Y = 100;
+            g.FillEllipse(brushgreen, locationbul.X + 430, locationbul.Y + 100, 10, 30);// x = 430  y = 100
+            g.FillEllipse(brushgreen, locationbul.X + 420, locationbul.Y + 110, 30, 10);// x = 420  y = 110
         }
         public void Asters(Graphics g)
         {

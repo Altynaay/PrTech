@@ -16,10 +16,14 @@ namespace Asteroid
         Bullet bullet;
         asteroidgame asteroids = new asteroidgame();
         SolidBrush brushgreen  = new SolidBrush(Color.Green);
+        Bitmap bitmap;
+        Graphics bitG;
 
         public Form1()
         {
             InitializeComponent();
+            bitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+            bitG = Graphics.FromImage(bitmap);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -29,11 +33,6 @@ namespace Asteroid
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            asteroids.Ellipse(e.Graphics);
-            asteroids.Polygon(e.Graphics);
-            asteroids.strelka(e.Graphics);
-            asteroids.Asters(e.Graphics);
-            asteroids.Bullet(e.Graphics);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -54,10 +53,14 @@ namespace Asteroid
 
             asteroids.star4.X--;   asteroids.star4.Y++;
 
-            asteroids.raketa.X++;
-            asteroids.raketa.Y++;
+            asteroids.raketa.X++;  asteroids.raketa.Y++;
 
-            Refresh();
+            asteroids.Ellipse(bitG);
+            asteroids.Polygon(bitG);
+            asteroids.strelka(bitG);
+            asteroids.Asters(bitG);
+            asteroids.Bullet(bitG);
+            pictureBox1.Image = bitmap;
         }
         
 
