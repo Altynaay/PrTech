@@ -1,0 +1,9 @@
+c:\users\nurzhigit\documents\visual studio 2013\Projects\Tank\Tank\bin\Debug\Tank.exe.config
+c:\users\nurzhigit\documents\visual studio 2013\Projects\Tank\Tank\obj\Debug\Tank.csprojResolveAssemblyReference.cache
+c:\users\nurzhigit\documents\visual studio 2013\Projects\Tank\Tank\obj\Debug\Tank.Form1.resources
+c:\users\nurzhigit\documents\visual studio 2013\Projects\Tank\Tank\obj\Debug\Tank.Properties.Resources.resources
+c:\users\nurzhigit\documents\visual studio 2013\Projects\Tank\Tank\obj\Debug\Tank.csproj.GenerateResource.Cache
+c:\users\nurzhigit\documents\visual studio 2013\Projects\Tank\Tank\bin\Debug\Tank.exe
+c:\users\nurzhigit\documents\visual studio 2013\Projects\Tank\Tank\bin\Debug\Tank.pdb
+c:\users\nurzhigit\documents\visual studio 2013\Projects\Tank\Tank\obj\Debug\Tank.exe
+c:\users\nurzhigit\documents\visual studio 2013\Projects\Tank\Tank\obj\Debug\Tank.pdb
