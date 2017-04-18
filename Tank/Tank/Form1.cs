@@ -8,9 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
-/*using System.Drawing.Bitmap;
-using System.Drawing.Graphics;
-using System.Drawing.Image;*/
 
 namespace Tank
 {
@@ -19,11 +16,13 @@ namespace Tank
         TankGame tanks = new TankGame();
         Graphics gpic;
         Bitmap bitmap;
-        Graphics bitG;
+        Graphics G;
+        public int k = 1;
         KeyEventArgs keypressed;
         public Form1()
         {
             InitializeComponent();
+            G = this.CreateGraphics();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -33,10 +32,22 @@ namespace Tank
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            tanks.MoveDown(e.Graphics);
-            //tanks.MoveUp(e.Graphics);
-            //tanks.MoveRight(e.Graphics);
-            //tanks.MoveLeft(e.Graphics);
+            if (k == 4)
+            {
+                tanks.MoveDown(e.Graphics);
+            }
+            if (k == 3)
+            {
+                tanks.MoveUp(e.Graphics);
+            }
+            if (k == 1)
+            {
+                tanks.MoveRight(e.Graphics);
+            }
+            if (k == 2)
+            {
+                tanks.MoveLeft(e.Graphics);
+            }
         }
         private void DownKey(object sender, KeyEventArgs g, PaintEventArgs e)
         {
@@ -45,7 +56,44 @@ namespace Tank
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-           
+
+            if (k == 1)
+            {
+                tanks.location.X += 10;
+            }
+            if (k == 4)
+            {
+                tanks.location.Y += 10;
+            }
+            if (k == 2)
+            {
+                tanks.location.X -= 10;
+            }
+            if (k == 3)
+            {
+                tanks.location.Y -= 10;
+            }
+            Refresh();
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Right)
+            {
+                k = 1;
+            }
+            if (e.KeyCode == Keys.Left)
+            {
+                k = 2;
+            }
+            if (e.KeyCode == Keys.Up)
+            {
+                k = 3;
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                k = 4;
+            }
         }
 
     }
