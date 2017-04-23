@@ -14,7 +14,8 @@ namespace Tank
         public Pen pen = new Pen(Color.Black);
         public Point location,lright,lleft,lup,ldown,location2;
         public int length = 40;
-        SolidBrush brushblack = new SolidBrush(Color.Black);
+        SolidBrush brushblack = new SolidBrush(Color.Blue);
+        SolidBrush brushred = new SolidBrush(Color.Red);
         public void MoveUp(Graphics g)
         {
             g.FillRectangle(brushblack, location.X + 30, location.Y + 30, length, length);
@@ -40,23 +41,23 @@ namespace Tank
 
         public void MoveUp2(Graphics g)
         {
-            g.FillRectangle(brushblack, location2.X + 30, location2.Y + 30, length, length);
-            g.FillRectangle(brushblack, location2.X + 40, location2.Y + 10, length / 2, length);
+            g.FillRectangle(brushred, location2.X + 30, location2.Y + 30, length, length);
+            g.FillRectangle(brushred, location2.X + 40, location2.Y + 10, length / 2, length);
         }
         public void MoveDown2(Graphics g)
         {
-            g.FillRectangle(brushblack, location2.X + 30, location2.Y + 30, length, length);
-            g.FillRectangle(brushblack, location2.X + 40, location2.Y + 50, length / 2, length);
+            g.FillRectangle(brushred, location2.X + 30, location2.Y + 30, length, length);
+            g.FillRectangle(brushred, location2.X + 40, location2.Y + 50, length / 2, length);
         }
         public void MoveRight2(Graphics g)
         {
-            g.FillRectangle(brushblack, location2.X + 30, location2.Y + 30, length, length);
-            g.FillRectangle(brushblack, location2.X + 50, location2.Y + 40, length, length / 2);
+            g.FillRectangle(brushred, location2.X + 30, location2.Y + 30, length, length);
+            g.FillRectangle(brushred, location2.X + 50, location2.Y + 40, length, length / 2);
         }
         public void MoveLeft2(Graphics g)
         {
-            g.FillRectangle(brushblack, location2.X + 30, location2.Y + 30, length, length);
-            g.FillRectangle(brushblack, location2.X + 10, location2.Y + 40, length, length / 2);
+            g.FillRectangle(brushred, location2.X + 30, location2.Y + 30, length, length);
+            g.FillRectangle(brushred, location2.X + 10, location2.Y + 40, length, length / 2);
         }
     }
 }
