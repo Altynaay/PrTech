@@ -14,6 +14,8 @@ namespace Tank
         public Pen pen = new Pen(Color.Black);
         public Point location,lright,lleft,lup,ldown,location2;
         public int length = 40;
+        public Point center,center2;
+        public int x, y;
         SolidBrush brushblack = new SolidBrush(Color.Blue);
         SolidBrush brushred = new SolidBrush(Color.Red);
         public void MoveUp(Graphics g)
@@ -36,6 +38,13 @@ namespace Tank
             g.FillRectangle(brushblack, location.X + 30, location.Y + 30, length, length);
             g.FillRectangle(brushblack, location.X + 10, location.Y + 40, length, length / 2);
         }
+        public void Center()
+        {
+            center.X = location.X + 40;
+            center.Y = location.Y + 40;
+        }
+
+
 
 
 
@@ -58,6 +67,11 @@ namespace Tank
         {
             g.FillRectangle(brushred, location2.X + 30, location2.Y + 30, length, length);
             g.FillRectangle(brushred, location2.X + 10, location2.Y + 40, length, length / 2);
+        }
+        public void Center2()
+        {
+            center2.X = location2.X + 40;
+            center2.Y = location2.Y + 40;
         }
     }
 }
